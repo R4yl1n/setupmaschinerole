@@ -1,0 +1,8 @@
+---
+  - name: nanoisass
+    hosts: linux
+    tasks:
+      - name: is nano installed
+        apt:
+          name: nano
+          state: latest

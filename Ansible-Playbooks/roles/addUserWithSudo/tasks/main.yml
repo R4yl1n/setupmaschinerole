@@ -1,0 +1,12 @@
+---
+  - name: Add a new user and make that user have access to sudo
+    hosts: linux
+    become: yes
+    tasks: 
+      - name: Add a new user and make that user have access to sudo
+        user:
+          name: testuser
+          password: "{{ 'Avelon' | password_hash('sha512')}}"
+          shell: /bin/bash
+          group: sudo 
+          append: yes

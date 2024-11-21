@@ -1,0 +1,9 @@
+---
+- name: Report the OS distro and version
+  hosts: linux
+  gather_facts: yes
+  tasks:
+    - name: report the OS distro and version
+      debug:
+        msg: > 
+          The OS is {{ansible_facts['distribution'] }} {{ ansible_facts['distribution_version']}}

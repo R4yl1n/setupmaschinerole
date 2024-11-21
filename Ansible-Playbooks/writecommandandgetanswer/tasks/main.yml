@@ -1,0 +1,13 @@
+---
+  - name: Add a new user and make that user have access to sudo
+    hosts: linux
+    tasks: 
+      - name: Add a new user and make that user have access to sudo
+        become: yes
+        command: whoami
+        register: command_output
+      
+      - name: return the answer 
+        debug:  
+          msg: "you are {{command_output.stdout}}"
+      

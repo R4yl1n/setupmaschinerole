@@ -1,0 +1,6 @@
+---
+  - name: Reboot the VM and wait for it to reboot
+    hosts: linux
+    tasks:
+      - name: Reboot the VM and wait for it to reboot
+        reboot:

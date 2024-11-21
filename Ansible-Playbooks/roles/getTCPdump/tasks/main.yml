@@ -1,0 +1,8 @@
+---
+  - name: Install tcpdump
+    hosts: linux
+    tasks:
+      - name: Install tcpdump
+        apt:
+            name: tcpdump
+            state: latest

@@ -1,0 +1,10 @@
+---
+- name: Prepare host
+  hosts: linux
+  become: yes
+  remote_user: ubuntu
+  roles:
+    - GetDistroAndVersion
+    - getTCPdump
+    - addUserWithSudo
+    - RebootAndWaitForCon
